@@ -1,0 +1,9 @@
+[caps]
+platformName = "iOS"
+deviceName = "iPad Air"
+platformVersion = "9.0"
+app = "../../../apps/TestApp/build/release-iphonesimulator/TestApp.app"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false

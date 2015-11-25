@@ -1,1 +1,5 @@
+ipadsim: IDEVICENAME='ipad simulator' --no-source --color --format pretty
+iphonesim: IDEVICENAME='iphone simulator' --no-source --color --format pretty
+
 default: --no-source --color --format pretty
+
