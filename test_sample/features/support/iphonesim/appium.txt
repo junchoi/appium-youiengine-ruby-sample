@@ -2,7 +2,7 @@
 platformName = "iOS"
 deviceName = "iPhone 6"
 platformVersion = "9.0"
-app = "../../../apps/TestApp/build/release-iphonesimulator/TestApp.app"
+#app = "../../../apps/TestApp/build/release-iphonesimulator/TestApp.app"
 
 [appium_lib]
 sauce_username = false
