@@ -1,0 +1,6 @@
+[caps]
+platformName = "youiengine"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false

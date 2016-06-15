@@ -1,0 +1,13 @@
+require 'rake/testtask'
+require 'rubygems'
+require 'rake/testtask'
+require 'cucumber'
+require 'cucumber/rake/task'
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << "unit_test_sample"
+  t.test_files = FileList["unit_test_sample/**/*_test*.rb"]
+  t.verbose = true
+end
+
+task :default => :test

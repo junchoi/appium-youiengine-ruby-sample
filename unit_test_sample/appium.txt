@@ -1,5 +1,5 @@
 [caps]
-platformName = "youi"
+platformName = "youiengine"
 
 [appium_lib]
 sauce_username = false
