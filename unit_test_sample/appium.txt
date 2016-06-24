@@ -1,6 +1,8 @@
 [caps]
-platformName = "youiengine"
-
-[appium_lib]
-sauce_username = false
-sauce_access_key = false
+platformName = "YouiEngine"
+deviceName = "iPhone 6"
+youiEngineAppAddress = "localhost"
+youiEngineAppPlatform = "iOS"
+app = "../../uswish/samples/VideoPlayer/build/ios/Debug-iphonesimulator/VideoPlayer.app"
+showIOSLog = true
+newCommandTimeout = 0

@@ -9,7 +9,6 @@ GEM
       tomlrb (~> 1.1)
     awesome_print (1.7.0)
     builder (3.2.2)
-    byebug (9.0.5)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     cucumber (2.4.0)
@@ -24,28 +23,19 @@ GEM
       gherkin (~> 4.0)
     cucumber-wire (0.0.1)
     diff-lcs (1.2.5)
-    domain_name (0.5.20160310)
-      unf (>= 0.0.5, < 1.0.0)
     ffi (1.9.10)
     gherkin (4.0.0)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
     json (1.8.3)
-    mime-types (2.99.2)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    minitest-hooks (1.4.0)
     multi_json (1.12.1)
     multi_test (0.1.2)
-    netrc (0.11.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
     rake (11.2.2)
-    rest-client (1.8.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -65,9 +55,6 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     tomlrb (1.2.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.2)
     websocket (1.2.3)
 
 PLATFORMS
@@ -75,12 +62,10 @@ PLATFORMS
 
 DEPENDENCIES
   appium_lib
-  byebug
   cucumber
   minitest
-  nokogiri
+  minitest-hooks
   rake
-  rest-client
   rspec
   rspec-expectations
 
