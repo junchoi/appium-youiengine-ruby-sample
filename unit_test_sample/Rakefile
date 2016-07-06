@@ -1,11 +1,16 @@
 require 'rubygems'
 require 'rake/testtask'
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << "unit_test_sample"
+Rake::TestTask.new(:test_ios) do |t|
   t.test_files = FileList["**/*_test*.rb"]
   t.verbose = false
   t.warning = false
 end
 
-task :default => :test
+Rake::TestTask.new(:test_android) do |t|
+  t.test_files = FileList["**/*_test*.rb"]
+  t.verbose = false
+  t.warning = false
+end
+
+task :default => :test_ios

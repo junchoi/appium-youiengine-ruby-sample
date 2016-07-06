@@ -1,8 +1,8 @@
 [caps]
 platformName = "YouiEngine"
-deviceName = "iPhone 6"
+deviceName = "iPhone 6 Plus"
 youiEngineAppAddress = "localhost"
 youiEngineAppPlatform = "iOS"
 app = "../../uswish/samples/VideoPlayer/build/ios/Debug-iphonesimulator/VideoPlayer.app"
 showIOSLog = true
-newCommandTimeout = 0
+newCommandTimeout = 3600

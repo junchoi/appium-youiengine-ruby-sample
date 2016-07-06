@@ -1,0 +1,8 @@
+[caps]
+platformName = "YouiEngine"
+deviceName = "Android"
+youiEngineAppAddress = "localhost"
+youiEngineAppPlatform = "android"
+app = "~/Code/youi/uswish/samples/VideoPlayer/build/AndroidNative/bin/VideoPlayer-debug.apk"
+avd = "Nexus_5_API_22_x86"
+newCommandTimeout = 3600

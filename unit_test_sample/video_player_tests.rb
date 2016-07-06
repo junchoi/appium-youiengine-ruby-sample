@@ -1,27 +1,16 @@
 require_relative "test_helper"
+require_relative "../common/common"
 
 require 'selenium-webdriver'
 require "awesome_print"
 
 class VideoPlayerTests < AppiumTest
+  include Common
 
   def before_all
-    capabilities = {
-      caps:       {
-        platformName:          'YouiEngine',
-        youiEngineAppAddress:  'localhost',
-        youiEngineAppPlatform: 'iOS',
-        deviceName:            'iPhone 6 Plus',
-        # TODO - the app path needs to be configurable since this is hardcoded to my setup - Dave R.
-        app:                   "../../uswish/samples/VideoPlayer/build/ios/Debug-iphonesimulator/VideoPlayer.app",
-        newCommandTimeout:     3600,
-        implicitWait:          10  
-      },
-      appium_lib: {
-        sauce_username:   nil, # don't run on Sauce
-        sauce_access_key: nil
-      }
-    }
+    platform = ENV["APPIUM_PLATFORM"] || "Android"
+    
+    capabilities = load_caps_for platform
 
     Appium::Driver.new(capabilities)
     Appium.promote_appium_methods AppiumTest
@@ -30,19 +19,7 @@ class VideoPlayerTests < AppiumTest
   end
 
   def after_all
-    prefix = SecureRandom.hex(8)
-
-    [:syslog, :crashlog].each do |log_type|
-      log_entries = $driver.driver.manage.logs.get(log_type)
-
-      File.open("../tmp/#{prefix}-#{log_type.to_s}.log", "w+") do |file|
-        log_entries.each do |entry|
-          file.write entry.message
-          file.write "\n"
-        end
-      end
-    end
-
+    dump_logs
     driver_quit
   end
 
@@ -50,9 +27,6 @@ class VideoPlayerTests < AppiumTest
   end
 
   def teardown
-    # back_button = find_element(:name, "Btn-Back")
-    # back_button.click
-    # sleep(2)
   end
 
   # def test_show_commands
@@ -80,7 +54,7 @@ class VideoPlayerTests < AppiumTest
       movie_link = elements.first
     }
 
-    sleep(1) # ಠ_ಠ - Movie element exists but isn't clickable while animation is running
+    sleep(2) # ಠ_ಠ - Movie element exists but isn't clickable while animation is running
 
     movie_link.click
 
